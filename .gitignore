@@ -1,0 +1,42 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# R files
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# renv
+renv/library/
+renv/cache/
+renv/staging/
+
+# Data (not redistributed)
+data/raw/
+data/processed/
+BPCells/
+cache/
+tmp/
+
+# Logs
+logs/
+
+# Large intermediate files
+*.h5
+*.hdf5
+*.mtx
+*.mtx.gz
+*.rds
+*.RDS
+*.qs
+*.parquet
+
+# Allow specific small RDS files needed for verification
+!results/final_tables/*.rds
+
+# Temporary files
+*.tmp
+*.bak
+*~
