@@ -1,0 +1,33 @@
+GSE243013 Pseudobulk Analysis Definition
+========================================
+
+Matrix orientation:
+  - Original BPCells matrix: cells x genes (1,254,749 x 31,831)
+  - Pseudobulk uses t() transpose view: genes x cells
+  - Output pseudobulk matrices: genes x patients
+
+Aggregation:
+  - Raw UMI counts summed per sampleID
+  - sampleID represents biological replicate
+  - Individual cells are NOT independent replicates
+  - Aggregated separately: all_immune, major_cell_type, sub_cell_type
+
+Cohort:
+  - Primary cohort: anti-PD1 treated patients with known pathological response (233 patients)
+  - pCR + MPR = Responder
+  - non-MPR = Non_responder
+  - Default threshold: minimum 20 cells per patient per cell type
+
+Filtering:
+  - Patients below threshold excluded from DE for that cell type only
+  - Full pseudobulk matrices retain all patients
+  - Gene filtering done separately in each edgeR model
+
+No transformation:
+  - No normalization
+  - No log transformation
+  - No differential expression in this step
+
+Clinical context:
+  - Post-neoadjuvant pathological response
+  - NOT pre-treatment predictive biomarker

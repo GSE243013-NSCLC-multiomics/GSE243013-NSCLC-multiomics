@@ -1,0 +1,10 @@
+"check","result"
+"VALIDATED_FOR_B2_exists",TRUE
+"QC2_COMPLETE_exists",TRUE
+"PROJECT_COMPLETE_exists",TRUE
+"canonical_cox_exists",TRUE
+"canonical_meta_exists",TRUE
+"canonical_levels_exists",TRUE
+"b2_approved_exists",TRUE
+"B2_uses_QC2",TRUE
+"B2_uses_original",FALSE

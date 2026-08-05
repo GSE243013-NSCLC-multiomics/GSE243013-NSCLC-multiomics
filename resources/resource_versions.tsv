@@ -1,0 +1,11 @@
+resource	version	status	notes
+MSigDB	2024.1.Hs	COMPLETED	Hallmark (50 gene sets) + Reactome (1839 gene sets) used
+curatedTCGAData	1.34.0	COMPLETED	TCGA data version 2.1.1; LUAD + LUSC
+BPCells	0.1.0	COMPLETED	Column-major sparse matrix format; installed from GitHub
+edgeR	4.10.1	COMPLETED	Patient-level pseudobulk DE; normLibSizes(method="TMM")
+fgsea	1.32.0	COMPLETED	fgseaMultilevel for preranked pathway enrichment
+metafor	NOT_COMPLETED	Meta-analysis package used for fixed-effect models; version not locked
+collecTRI	NOT_COMPLETED	Transcription factor inference NOT completed for any cell type
+PROGENy	NOT_COMPLETED	Pathway activity inference NOT completed
+ExperimentHub	snapshot 2026-07-20	COMPLETED	TCGA data downloaded via ExperimentHub
+renv	NOT_COMPLETED	Full renv.lock not generated; see docs/DEPENDENCY_LIMITATIONS.md

@@ -1,0 +1,48 @@
+# GSE243013 Final Analysis Definition
+
+## Primary Endpoint
+- Pathological complete response (pCR) vs non-pCR to neoadjuvant anti-PD1 immunotherapy
+
+## Primary Cohort
+- GSE243013: 243 NSCLC patients with scRNA-seq after neoadjuvant anti-PD1
+- Treatment: anti-PD1 monotherapy (n=234), strict chemoimmunotherapy (n=213), chemo control (n=9)
+
+## Biological Replicate Unit
+- Patient (not cell) is the biological replicate
+- Patient-level pseudobulk aggregation
+
+## Statistical Model
+- edgeR: ~ cancer_type + response_binary (Responder vs Non_responder)
+- TREAT lfc threshold: log2(1.2)
+- Cox: Surv(OS_days/365.25, OS_event) ~ score_z + age_z + sex_f + stage_f
+- ties method: efron
+
+## Multiple Testing Strategy
+- BH FDR correction per cohort for edgeR
+- BH FDR correction per program for meta-analysis
+- Permutation negative control for FDR calibration
+
+## Sensitivity Analyses
+- GSVA Gaussian vs ssGSEA primary scoring
+- Median KM split (visualization only)
+- PH assumption testing via cox.zph
+
+## TCGA Interpretation Boundaries
+- TCGA is NOT an immunotherapy validation cohort
+- TCGA provides expression-clinical correlation data
+- Cannot validate immunotherapy response prediction
+- Used for generalizability of expression-program associations
+
+## Superseded Results
+- Step 08B1 original: logHR extraction bug (hr_row[2]=exp(-coef))
+- Step 08B1-QC: FAIL_FDR_CALCULATION
+- Step 08B1-QC2: PASS - canonical results with corrected extraction
+- Only QC2 canonical results valid for formal conclusions
+
+## Final Valid Result Versions
+- Step 05-07: Original (no known issues)
+- Step 08A: Original (no known issues)
+- Step 08B1-QC2 canonical: Final valid clinical validation
+- Step 08B2: Exploratory multi-omics integration
+
+Defined: 2026-08-04 23:48:53 CST

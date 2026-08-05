@@ -1,0 +1,19 @@
+GSE243013 Step 07 Analysis Definition
+======================================
+
+Input: patient-level edgeR differential expression complete gene rankings from Step 06
+Not limited to significant DE genes
+Primary ranking: sign(logFC) * sqrt(F)
+Positive NES or activity score: Responder relatively higher/more active
+Negative NES or activity score: Non_responder relatively higher/more active
+Hallmark and Reactome used for primary pathway analysis
+PROGENy used for signal pathway activity inference
+CollecTRI used for transcription factor activity inference
+Primary and strict chemoimmunotherapy cohorts used for robustness check
+Global FDR used for cross-cell-type strict screening
+Leading-edge genes used to identify core enrichment drivers
+TF-pathway overlap is regulatory support evidence only
+TF-pathway associations not stated as causal
+Current results are post-treatment pathological response-associated immune programs
+Not referred to as pre-treatment predictive biomarkers
+TCGA, CPTAC, and DepMap external validation not yet completed

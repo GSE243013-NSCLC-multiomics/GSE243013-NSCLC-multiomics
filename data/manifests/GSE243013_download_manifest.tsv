@@ -1,0 +1,5 @@
+resource	accession	filename	purpose	expected_destination	checksum_if_available	redistributed	download_source
+scRNA-seq count matrix	GSE243013	GSE243013_NSCLC_immune_scRNA_counts.mtx.gz	Sparse count matrix (cells x genes)	data/raw/GSE243013/	See GEO series page	No	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243013/suppl/
+cell metadata	GSE243013	GSE243013_NSCLC_immune_scRNA_metadata.csv.gz	Cell-level annotations with patient IDs	data/raw/GSE243013/	See GEO series page	No	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243013/suppl/
+gene annotations	GSE243013	GSE243013_genes.csv.gz	Gene names and IDs	for matrix assembly	See GEO series page	No	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243013/suppl/
+barcode annotations	GSE243013	GSE243013_barcodes.csv.gz	Cell barcode identifiers	for matrix assembly	See GEO series page	No	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243013/suppl/

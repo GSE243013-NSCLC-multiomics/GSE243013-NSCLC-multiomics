@@ -1,0 +1,8 @@
+"figure_id","title","source_files","status"
+"Figure_1","Study design, patient cohort and analysis pipeline","Step00-04 outputs","To be created during manuscript preparation"
+"Figure_2","Cell type composition and patient-level pseudobulk design","Step05 pseudobulk matrices","To be created during manuscript preparation"
+"Figure_3","Cell-type-specific differential programs and core programs","Step06 edgeR results, Step07 programs","To be created during manuscript preparation"
+"Figure_4","Hallmark/Reactome pathway and TF regulatory network","Step07 Hallmark/Reactome, CollecTRI","To be created during manuscript preparation"
+"Figure_5","TCGA LUAD/LUSC independent expression and clinical validation","Step08B1-QC2 canonical Cox, meta-analysis","To be created during manuscript preparation"
+"Figure_6","Mutation, CNV, Methylation, RPPA multi-omics integration","Step08B2 multi-omics associations","To be created during manuscript preparation"
+"Figure_7","Final mechanistic model","Synthesis of all results","To be created during manuscript preparation"

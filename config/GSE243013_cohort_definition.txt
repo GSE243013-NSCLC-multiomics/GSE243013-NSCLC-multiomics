@@ -1,0 +1,39 @@
+GSE243013 Cohort Definition
+==========================
+
+Dataset: GSE243013 - A single-cell atlas of immune heterogeneity in anti-PD1-treated NSCLC
+Total scRNA samples: 243 (one per patient)
+Total cells: 1,254,749
+
+Primary study population: Patients receiving neoadjuvant chemo-immunotherapy
+Exploratory control: Patients receiving chemotherapy only
+
+Response classification (three-level):
+  - pCR: pathological complete response
+  - MPR: major pathological response
+  - non-MPR: non-major pathological response
+  - unknown: response category unknown
+  - UNRESOLVED: conflicting or uninterpretable
+
+Response classification (binary):
+  - Responder: pCR or MPR
+  - Non_responder: non-MPR
+  - NA: unknown or UNRESOLVED
+
+Primary cohort eligibility criteria:
+  1. treatment_class_candidate == chemo_immunotherapy
+  2. response_binary is not NA
+  3. No patient-level conflicts in response, treatment, cancer_type
+  4. sampleID is not missing
+
+Statistical unit: sampleID (biological replicate, one per patient)
+Cell count is NOT used as independent sample size
+
+Data scope: Immune cells only (T/NK, B, Myeloid)
+  - Cannot be used for malignant cell state analysis
+  - Post-treatment surgical samples only
+
+Conclusions should be framed as:
+  - Response-associated mechanisms
+  - Residual tumor-associated mechanisms
+

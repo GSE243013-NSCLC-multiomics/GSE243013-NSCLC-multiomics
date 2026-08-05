@@ -1,0 +1,3 @@
+resource	accession	filename	source	access_date	expected_destination	checksum_if_available	redistributed_in_repository	reason
+TCGA-LUAD	TCGA-LUAD	TCGA_LUAD_core_multiomics_all_samples_v2.1.1.rds	curatedTCGAData 1.34.0 via ExperimentHub	2026-07-20	data/raw/TCGA/	ExperimentHub cache	No	Downloaded via curatedTCGAData::curatedTCGAData("LUAD")
+TCGA-LUSC	TCGA-LUSC	TCGA_LUSC_core_multiomics_all_samples_v2.1.1.rds	curatedTCGAData 1.34.0 via ExperimentHub	2026-07-20	data/raw/TCGA/	ExperimentHub cache	No	Downloaded via curatedTCGAData::curatedTCGAData("LUSC")

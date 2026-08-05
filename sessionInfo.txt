@@ -1,0 +1,36 @@
+Session Information
+==================
+
+Generated: 2026-08-05 22:52:55 CST 
+
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS Tahoe 26.3.1
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8
+
+time zone: Asia/Shanghai
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.6.1
+
+
+R Version:
+  Version: R version 4.6.1 (2026-06-24) 
+  Platform: aarch64-apple-darwin23 
+  Arch: aarch64 
+  OS: darwin23 
+
+Locale: C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8 
+
+BiocManager version: 1.30.27 
+Bioc version: 3.23 

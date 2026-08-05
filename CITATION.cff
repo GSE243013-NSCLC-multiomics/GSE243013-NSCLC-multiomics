@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "GSE243013 NSCLC Multi-Omics Analysis"
+type: software
+version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Xie
+    given-names: Xiaowei
+    orcid: "https://orcid.org/0009-0009-4221-2777"
+    email: xiexiaowei@fjmu.edu.cn
+  - family-names: Guo
+    given-names: Ying
+  - family-names: Zhang
+    given-names: Yang
+repository-code: "https://github.com/GSE243013-NSCLC-multiomics/GSE243013-NSCLC-multiomics"
+license: MIT
+preferred-citation:
+  type: article
+  title: "An Immune-Compartment Glycolysis-Related Program Associated with Pathological Nonresponse after Neoadjuvant Anti-PD-1-Based Treatment in NSCLC"
+  authors:
+    - family-names: Xie
+      given-names: Xiaowei
+    - family-names: Guo
+      given-names: Ying
+    - family-names: Zhang
+      given-names: Yang
+  year: 2026

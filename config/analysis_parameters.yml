@@ -1,0 +1,110 @@
+# Analysis Parameters
+# Extracted from final valid scripts and configuration definitions.
+# Do not modify without re-running the full pipeline.
+
+# =============================================================================
+# Study Design
+# =============================================================================
+study:
+  accession: "GSE243013"
+  platform: "scRNA-seq (10x Genomics)"
+  species: "Homo sapiens"
+  total_patients: 243
+  total_cells: 1254749
+  total_genes: 31831
+
+# =============================================================================
+# Cohort Definitions
+# =============================================================================
+cohort:
+  primary_cohort: "anti-PD1 treated patients with known pathological response"
+  primary_n: 233
+  response_binary:
+    Responder: "pCR + MPR"
+    Non_responder: "non-MPR"
+  strict_chemoimmunotherapy_n: 213
+  chemotherapy_control_n: 9
+  histology:
+    LUAD: 63
+    LUSC: 180
+
+# =============================================================================
+# Pseudobulk Parameters
+# =============================================================================
+pseudobulk:
+  min_cells_per_patient_per_celltype: 20
+  aggregation: "raw UMI counts summed per sampleID"
+  biological_replicate_unit: "patient sampleID (NOT individual cells)"
+  matrix_orientation: "genes x patients (transposed from cells x genes)"
+
+# =============================================================================
+# edgeR Differential Expression
+# =============================================================================
+edger:
+  model_formula: "~ cancer_type + response_binary"
+  contrast: "response_binaryResponder"
+  treat_lfc_threshold: "log2(1.2)"
+  test_type: "QLF (quasi-likelihood FDR)"
+  ties_method: "efron"
+  fdr_correction: "BH per cell type"
+  min_cells_per_patient: 20
+  response_definition:
+    Responder: "pCR + MPR"
+    Non_responder: "non-MPR"
+
+# =============================================================================
+# Pathway Enrichment (fgsea)
+# =============================================================================
+fgsea:
+  method: "fgseaMultilevel"
+  ranking: "sign(logFC) * sqrt(F)"
+  min_size: 15
+  max_size: 500
+  eps: 1.0e-50
+  gsea_param: 1
+  collections:
+    - Hallmark (MSigDB)
+    - Reactome (MSigDB)
+  msigdb_version: "2024.1.Hs"
+
+# =============================================================================
+# TCGA Scoring
+# =============================================================================
+tcga_scoring:
+  primary_method: "ssGSEA"
+  ssGSEA_alpha: 0.25
+  ssGSEA_normalized: true
+  sensitivity_method: "GSVA Gaussian"
+  gsva_tau: 1
+  gsva_maxDiff: true
+  score_normalization: "z-scored within cohort x program"
+
+# =============================================================================
+# TCGA Clinical Modeling
+# =============================================================================
+tcga_clinical:
+  survival_formula: "Surv(OS_days/365.25, OS_event) ~ score_z + age_z + sex_f + stage_f"
+  ties_method: "efron"
+  primary_endpoint: "Overall Survival"
+  meta_analysis_method: "Fixed-effect (metafor::rma)"
+  histology: "LUAD and LUSC analyzed separately, NEVER merged"
+
+# =============================================================================
+# Evidence Thresholds
+# =============================================================================
+thresholds:
+  edgeR_fdr: 0.05
+  fgsea_fdr: 0.05
+  meta_fdr: 0.05
+  core_program_definition: "meta_FDR < 0.05 AND direction consistency across histologies"
+  level_a: "meta_FDR < 0.05 (core program)"
+  level_b: "FDR < 0.05 in at least one histology, meta_FDR >= 0.05"
+  level_c: "No FDR < 0.05 in either histology"
+
+# =============================================================================
+# Sensitivity Analyses
+# =============================================================================
+sensitivity:
+  median_km_split: "visualization only, NOT a statistical test"
+  gsva_sensitivity: "GSVA Gaussian vs ssGSEA primary"
+  ph_assumption: "cox.zph() for proportional hazards"

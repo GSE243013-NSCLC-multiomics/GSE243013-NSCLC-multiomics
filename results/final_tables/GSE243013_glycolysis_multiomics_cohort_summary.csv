@@ -1,0 +1,9 @@
+"cohort","omics_type","n_total_features","n_significant_FDR05","has_results","top_feature","top_FDR"
+"LUAD","methylation",1000,30,TRUE,"cg02952918",2.57254455255619e-07
+"LUAD","rppa",218,86,TRUE,"Cyclin_B1",0
+"LUAD","mutation",16,0,TRUE,"NO_SIGNIFICANT_FEATURE",NA
+"LUAD","cnv",1,0,FALSE,"NO_RESULT_GENERATED",NA
+"LUSC","methylation",1000,0,TRUE,"NO_SIGNIFICANT_FEATURE",NA
+"LUSC","rppa",218,0,TRUE,"NO_SIGNIFICANT_FEATURE",NA
+"LUSC","mutation",9,0,TRUE,"NO_SIGNIFICANT_FEATURE",NA
+"LUSC","cnv",1,0,FALSE,"NO_RESULT_GENERATED",NA

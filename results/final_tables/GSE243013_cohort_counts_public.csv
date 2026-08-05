@@ -1,0 +1,13 @@
+metric,value
+total_patients,243
+anti_PD1_records,234
+primary_analysis,233
+strict_exposure,213
+strict_evaluable,212
+responders,130
+nonresponders,112
+chemotherapy_only,9
+luad_patients,63
+lusc_patients,180
+total_cells,1254749
+total_genes,31831

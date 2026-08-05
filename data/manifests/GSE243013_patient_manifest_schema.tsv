@@ -1,0 +1,27 @@
+column_name	data_type	description	source	required_for_reproduction	reconstructed_by_script
+sampleID	character	Patient sample identifier	GEO metadata	Yes	02_build_GSE243013_patient_manifest.R
+n_cells	integer	Number of immune cells per patient	GEO metadata	Yes	04_download_and_import_GSE243013_counts.R
+cancer_type	character	Histological subtype (LUAD or LUSC)	GEO metadata	Yes	02_build_GSE243013_patient_manifest.R
+pre_treatment_staging	character	Clinical stage before treatment	GEO metadata	No	02_build_GSE243013_patient_manifest.R
+pathological_response_original	character	Original response classification from GEO	GEO metadata	Yes	02_build_GSE243013_patient_manifest.R
+pathological_response_clean	character	Standardized response (pCR/MPR/non-MPR)	GEO metadata	Yes	02_build_GSE243013_patient_manifest.R
+response_binary	character	Binary response (Responder/Non_responder)	Computed	Yes	03_repair_GSE243013_cohort_definition.R
+pathological_response_rate_original	character	Response rate annotation from GEO	GEO metadata	No	02_build_GSE243013_patient_manifest.R
+response_rate_value_type	character	Type of response rate value	GEO metadata	No	02_build_GSE243013_patient_manifest.R
+response_rate_numeric_extracted	numeric	Extracted numeric response rate	GEO metadata	No	02_build_GSE243013_patient_manifest.R
+anti_PD1_therapy_original	character	Anti-PD1 therapy annotation from GEO	GEO metadata	No	02_build_GSE243013_patient_manifest.R
+chemotherapy_original	character	Chemotherapy annotation from GEO	GEO metadata	No	02_build_GSE243013_patient_manifest.R
+targeted_therapy_original	character	Targeted therapy annotation from GEO	GEO metadata	No	02_build_GSE243013_patient_manifest.R
+has_anti_PD1	logical	Whether patient received anti-PD1	Computed	Yes	03_repair_GSE243013_cohort_definition.R
+has_chemotherapy	logical	Whether patient received chemotherapy	Computed	Yes	03_repair_GSE243013_cohort_definition.R
+has_targeted_therapy	logical	Whether patient received targeted therapy	Computed	No	03_repair_GSE243013_cohort_definition.R
+treatment_pattern	character	Combined treatment pattern	Computed	Yes	03_repair_GSE243013_cohort_definition.R
+anti_PD1_cohort	logical	Eligible for primary anti-PD1 analysis	Computed	Yes	03_repair_GSE243013_cohort_definition.R
+strict_chemoimmunotherapy_cohort	logical	Eligible for strict chemoimmunotherapy analysis	Computed	Yes	03_repair_GSE243013_cohort_definition.R
+chemotherapy_control_cohort	logical	Eligible for chemotherapy control analysis	Computed	Yes	03_repair_GSE243013_cohort_definition.R
+major_cell_type_count	integer	Number of major cell types	Computed	No	05_build_GSE243013_patient_celltype_pseudobulk.R
+sub_cell_type_count	integer	Number of sub cell types	Computed	No	05_build_GSE243013_patient_celltype_pseudobulk.R
+has_any_patient_level_conflict	logical	Whether patient has annotation conflicts	Computed	Yes	02_build_GSE243013_patient_manifest.R
+primary_analysis_eligible	logical	Eligible for primary analysis	Computed	Yes	03_repair_GSE243013_cohort_definition.R
+strict_sensitivity_analysis_eligible	logical	Eligible for strict sensitivity analysis	Computed	Yes	03_repair_GSE243013_cohort_definition.R
+chemotherapy_control_eligible	logical	Eligible for chemotherapy control	Computed	Yes	03_repair_GSE243013_cohort_definition.R

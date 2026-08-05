@@ -1,0 +1,9 @@
+result_family,old_file,replacement_file,reason_replaced,valid_for_inference,valid_for_audit_only
+Step08B1_Cox_LUAD,03_results/step08_TCGA/clinical_models/LUAD/TCGA_LUAD_program_OS_Cox_results.csv.gz,03_results/step08_TCGA/B1_QC2/cox/GSE243013_canonical_Cox_results.csv.gz,logHR extraction bug (hr_row[2]=exp(-coef) instead of coef),FALSE,TRUE
+Step08B1_Cox_LUAD,03_results/step08_TCGA/B1_QC/cox/LUAD_Cox_recalculated.csv.gz,03_results/step08_TCGA/B1_QC2/cox/GSE243013_canonical_Cox_results.csv.gz,Superseded by QC2 canonical with fixed logHR,FALSE,TRUE
+Step08B1_Cox_LUSC,03_results/step08_TCGA/clinical_models/LUSC/TCGA_LUSC_program_OS_Cox_results.csv.gz,03_results/step08_TCGA/B1_QC2/cox/GSE243013_canonical_Cox_results.csv.gz,logHR extraction bug,FALSE,TRUE
+Step08B1_Cox_LUSC,03_results/step08_TCGA/B1_QC/cox/LUSC_Cox_recalculated.csv.gz,03_results/step08_TCGA/B1_QC2/cox/GSE243013_canonical_Cox_results.csv.gz,Superseded by QC2 canonical with fixed logHR,FALSE,TRUE
+Step08B1_meta,03_results/step08_TCGA/meta_analysis/GSE243013_TCGA_program_OS_fixed_effect_meta.csv,03_results/step08_TCGA/B1_QC2/meta/GSE243013_canonical_fixed_effect_meta.csv,Used buggy logHR and SE,FALSE,TRUE
+Step08B1_meta,03_results/step08_TCGA/B1_QC/meta/...,03_results/step08_TCGA/B1_QC2/meta/GSE243013_canonical_fixed_effect_meta.csv,Superseded by QC2 meta-analysis,FALSE,TRUE
+Step08B1_QC_comparison,03_results/step08_TCGA/B1_QC/cox/original_vs_recalculated_Cox_comparison.csv,03_results/step08_TCGA/B1_QC2/cox/GSE243013_Cox_difference_magnitude_audit.csv,QC1 comparison superseded by QC2,FALSE,TRUE
+Step08B1_QC_comparison,...,03_results/step08_TCGA/B1_QC2/cox/GSE243013_original_QC_canonical_Cox_comparison.csv,...,FALSE,TRUE

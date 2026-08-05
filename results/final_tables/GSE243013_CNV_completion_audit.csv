@@ -1,0 +1,3 @@
+"cohort","GISTIC_thresholded","GISTIC_continuous","n_patients_thresholded","n_patients_continuous","n_genes","cnv_analysis_performed","cnv_results_exist","status"
+"LUAD",TRUE,TRUE,516,516,24776,FALSE,FALSE,"DOWNLOADED_NOT_ANALYZED"
+"LUSC",TRUE,TRUE,501,501,24776,FALSE,FALSE,"DOWNLOADED_NOT_ANALYZED"

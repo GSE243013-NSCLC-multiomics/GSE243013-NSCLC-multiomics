@@ -1,0 +1,5 @@
+"omics_type","status","n_programs_tested","n_programs_sig_FDR05","notes"
+"mutation","COMPLETE_EXPLORATORY",25,40,"Driver gene mutation burden and gene-level mutation associations"
+"cnv","COMPLETE_EXPLORATORY",NA,NA,"GISTIC thresholded and continuous CNV for core programs and drivers"
+"methylation","COMPLETE_EXPLORATORY",25,7644,"Top 1000 variable CpGs correlation with program scores"
+"rppa","COMPLETE_EXPLORATORY",25,1079,"RPPA protein correlation with program scores"

@@ -1,0 +1,25 @@
+# Project Paths Configuration
+# Copy this file to config/paths.yml and edit for your environment.
+# The pipeline reads from config/paths.yml; this file is a template.
+
+project_root: "."
+raw_data_dir: "data/raw"
+processed_data_dir: "data/processed"
+results_dir: "results"
+figures_dir: "figures"
+logs_dir: "logs"
+
+# BPCells column-major storage
+bpcells_dir: "data/raw/GSE243013/bpcells/GSE243013_counts_colmajor"
+
+# TCGA data (downloaded via curatedTCGAData)
+tcga_luad_dir: "data/raw/TCGA/LUAD"
+tcga_lusc_dir: "data/raw/TCGA/LUSC"
+tcga_experimenthub_cache: "data/raw/TCGA/ExperimentHub_cache"
+
+# MSigDB extracted folder (for Step 07A)
+# Set MSIGDB_EXTRACTED_DIR environment variable or edit this path
+msigdb_extracted_dir: "~/Downloads/msigdbr_manual/msigdb"
+
+# R personal library
+r_lib_user: "~/Library/R/arm64/4.6/library"

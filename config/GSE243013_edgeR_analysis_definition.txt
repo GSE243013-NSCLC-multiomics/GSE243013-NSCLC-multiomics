@@ -1,0 +1,22 @@
+GSE243013 edgeR Analysis Definition
+====================================
+
+Statistical unit: patient sampleID (NOT individual cells)
+Input: patient-level raw UMI pseudobulk counts from Step 05
+Primary comparison: Responder vs Non_responder
+Responder definition: pCR + MPR
+Non_responder definition: non-MPR
+Primary cohort: anti-PD1 treated patients with known pathological response
+Minimum cells per patient per cell type: 20
+Primary model adjusts for LUAD vs LUSC histology
+Positive logFC: Responder expression higher
+Negative logFC: Non_responder expression higher
+QLF: general differential expression test
+glmTreat: formal test for >1.2x fold change threshold
+FDR_within_celltype: inference within single cell type
+FDR_global: cross-cell-type strict candidate screening
+Strict chemoimmunotherapy cohort: sensitivity analysis
+LUAD and LUSC stratified models: exploratory sensitivity analysis
+No per-cell statistical tests performed
+Results interpreted as post-treatment pathological response-associated immune expression programs
+Pathway enrichment and multi-omics integration not yet performed

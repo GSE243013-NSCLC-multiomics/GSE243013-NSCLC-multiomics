@@ -1,0 +1,26 @@
+TCGA External Validation Definition
+====================================
+
+Generated: 2026-08-04 18:43:45.058833
+curatedTCGAData version: 1.34.0
+TCGA data version: 2.1.1
+
+1. TCGA-LUAD and TCGA-LUSC are analyzed separately.
+2. Data downloaded via curatedTCGAData and ExperimentHub from R directly.
+3. Only primary tumor samples (sample type code 01) are used.
+4. TCGA is primarily untreated primary tumor data.
+5. TCGA is NOT a neoadjuvant anti-PD-1 efficacy cohort.
+6. Therefore, Responder vs Non_responder cannot be directly validated.
+7. TCGA validates the independent detectability of immune programs.
+8. TCGA tests associations between programs and clinical/mutation/CNV/methylation/protein.
+9. LUAD and LUSC are NOT merged into a single expression cohort.
+10. Cross-histology results use effect size comparison or meta-analysis.
+11. Bulk RNA immune program scores cannot directly equal single-cell type activity.
+12. Downstream models must consider tumor purity or immune cell composition confounding.
+13. Step 08A only downloads and audits — no statistical inference is performed.
+
+Program Interpretation Boundaries:
+- Programs derive from post-treatment immune cell scRNA-seq leading edges.
+- In TCGA bulk RNA, these represent relative enrichment/detectability of immune programs.
+- They do NOT represent cell-type-specific abundance or activity.
+- Any bulk-level association requires deconvolution or immune fraction adjustment.

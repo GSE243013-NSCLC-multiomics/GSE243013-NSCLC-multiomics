@@ -1,0 +1,22 @@
+Step 08B1 Analysis Definition
+==============================
+
+Generated: 2026-08-04 20:03:05.596814
+
+- TCGA-LUAD and TCGA-LUSC scored and modeled separately.
+- RNASeq2GeneNorm is upper-quartile log2-normalized RSEM TPM.
+- No additional log2 transformation applied.
+- Primary scoring: ssGSEA (alpha=0.25, normalized).
+- Sensitivity scoring: GSVA Gaussian.
+- Scores z-scored within each cohort independently.
+- Primary survival variable: continuous program score (z-scored).
+- HR represents risk per 1 SD increase in program score.
+- Median split used ONLY for KM visualization, not statistical testing.
+- Cox models adjust for age, sex, and pathologic stage.
+- LUAD and LUSC NOT merged for modeling.
+- Cross-histology results use fixed-effect meta-analysis.
+- TCGA is NOT an immunotherapy cohort.
+- TCGA cannot directly validate anti-PD-1 Responder vs Non_responder.
+- Bulk RNA program scores cannot be equated to cell-type-specific activity.
+- Clinical associations do not prove causality.
+- Mutation, CNV, Methylation, RPPA in Step 08B2.
