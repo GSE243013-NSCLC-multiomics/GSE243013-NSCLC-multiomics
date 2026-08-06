@@ -1,59 +1,68 @@
-# GSE243013 NSCLC Multi-Omics Analysis
+# GSE243013 非小细胞肺癌多组学分析
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21816175.svg)](https://doi.org/10.5281/zenodo.21816175)
+## Archived Release
 
-## 1. Study Overview
+The exact version of the code accompanying the manuscript is archived
+in Zenodo:
 
-This repository contains the analysis code for a single-cell RNA sequencing (scRNA-seq) study of immune heterogeneity in non-small cell lung cancer (NSCLC) patients treated with neoadjuvant anti-PD-1 immunotherapy. The study uses GSE243013 data (243 patients, 1,254,749 cells) to identify immune-compartment expression programs associated with pathological nonresponse.
+- Version: v1.0.0
+- DOI: https://doi.org/10.5281/zenodo.21816175
+- Release date: 6 August 2026
 
-**Key finding:** The glycolysis-related program met the prespecified internal integrated-evidence criterion, with negative NES across all 8 scored cell types (FDR < 0.05) and external survival association in TCGA-LUAD (HR = 1.46, P = 5.68e-06).
+ 1. 研究概述
 
-## 2. Repository Scope
+本代码库包含一项针对接受新辅助抗PD-1免疫治疗的非小细胞肺癌（NSCLC）患者免疫异质性单细胞RNA测序（scRNA-seq）研究的分析代码。该研究利用GSE243013数据（243名患者，1,254,749个细胞）来识别与病理学无应答相关的免疫组分表达程序。
 
-This repository includes:
-- All analysis scripts (Step 00-09A) for the computational pipeline
-- Manuscript generation and audit scripts (M1-M7C)
-- Configuration templates and parameter definitions
-- Small final result tables supporting the manuscript
-- Documentation of the analysis workflow and data dictionary
+**关键发现：** 糖酵解相关程序满足预设的内部整合证据标准，在所有8种评分细胞类型中均呈负NES（FDR < 0.05），并在TCGA-LUAD中显示出外部生存关联（HR = 1.46，P = 5.68e-06）。
 
-This repository does **not** include:
-- Raw patient-level scRNA-seq data (must be downloaded from GEO)
-- TCGA multi-omics data (downloaded via curatedTCGAData)
-- Large intermediate results (BPCells matrices, edgeR objects, scoring matrices)
-- Patient-level manifest (reconstructed locally from GEO metadata)
-- Complete renv.lock (see [Dependency Limitations](docs/DEPENDENCY_LIMITATIONS.md))
+## 2. 仓库范围
 
-## 3. Main Findings
+此仓库包含：
+- 计算流程的所有分析脚本（步骤 00-09A）
+- 手稿生成与审计脚本 (M1-M7C)
+- 配置模板和参数定义
+ 支持手稿的小型最终结果表
+- 分析工作流和数据字典文档
 
-1. **Glycolysis program:** Immune-compartment glycolysis-related expression program met the prespecified internal integrated-evidence criterion (meta-FDR < 0.05)
-2. **Eight cell types:** Negative NES across all 8 scored cell types (FDR < 0.05)
-3. **TCGA-LUAD external association:** HR = 1.46 (CI: 1.24-1.73, P = 5.68e-06)
-4. **TCGA-LUSC:** No significant association (HR = 1.02, P = 0.750)
-5. **Heterogeneity:** I-squared approximately 90%; fixed-effect pooled estimate is descriptive
-6. **Multi-omics:** LUAD methylation (30 CpGs, top cg02952918), RPPA (86 proteins, top Cyclin B1); no program-level CNV association result was generated
-7. **CollecTRI TF inference:** Not completed for any cell type
+此仓库不**包含：
+- 原始患者水平单细胞RNA测序数据（必须从GEO下载）
+- TCGA 多组学数据（通过 curatedTCGAData 下载）
+- 大型中间结果（BPCells 矩阵、edgeR 对象、评分矩阵）
+- 患者级别清单（从 GEO 元数据本地重建）
+- 完成 renv.lock (参见 [依赖限制](docs/DEPENDENCY_LIMITATIONS.md)
 
-## 4. Directory Structure
+## 3. 主要发现
+
+ **糖酵解程序：**免疫区糖酵解相关表达程序满足预设的内部整合证据标准（meta-FDR < 0.05）
+2. **八种细胞类型：**所有8种评分细胞类型均呈负NES（FDR < 0.05）
+3. **TCGA-LUAD 外部关联：** HR = 1.46 (CI: 1.24-1.73, P = 5.68e-06)
+4. **TCGA-LUSC:** 无显著关联 (HR = 1.02, P = 0.750)
+5. **异质性：** I-squared 约为 90%；固定效应汇总估计具有描述性
+6. **** LUAD 甲基化（30 个 CpG 位点，最高 cg02952918），RPPA（86 种蛋白质，最高 Cyclin B1）；未生成程序水平的 CNV 关联结果
+7. **CollecTRI TF 推理：** 尚未完成任何细胞类型的分析
+
+## 4. 目录结构
 
 ```
 GSE243013-NSCLC-multiomics/
-├── config/                    # Configuration templates
-│   ├── paths.example.yml      # Project path template
-│   ├── analysis_parameters.yml # All analysis parameters
-│   └── *.txt                  # Step-specific analysis definitions
-├── scripts/
-│   ├── analysis/              # Step 00-09A analysis scripts
-│   ├── manuscript/            # M1-M7C manuscript scripts
-│   └── run_pipeline.R         # Pipeline runner
-├── data/
-│   ├── README.md              # Data download instructions
-│   └── manifests/             # Download manifests and schema
-├── resources/
-│   └── resource_versions.tsv  # External resource versions
-├── results/
-│   └── final_tables/          # Small final result tables
-├── manuscript/                # Manuscript output files
-├── docs/                      # Documentation
-├── tests/                     # Pipeline validation tests
+├── config/                    # 配置文件模板
+│   ├── paths.example.yml      # 项目路径模板
+│   ├── analysis_parameters.yml # 所有分析参数
+│   └── *.txt                  # 特定步骤的分析定义
+├── 脚本/
+│   ├── analysis/              # 步骤 00-09A 分析脚本
+│   ├── manuscript/            # M1-M7C 手稿脚本
+│   └── run_pipeline.R         # 管道运行器
+├── 数据/
+│   ├── README.md              # 数据下载说明
+
+├── 资源/
+│   └── resource_versions.tsv  # 外部资源版本
+├── 结果/
+│   └── final_tables/          # 小型最终结果表
+├── manuscript/                # 手稿输出文件
+├── docs/                      # 文档
+├── tests/                     # 流水线验证测试
 ├── reproduce.sh               # Main reproduction script
 ├── README.md                  # This file
 ├── LICENSE                    # MIT License (code)
