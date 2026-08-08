@@ -1,9 +1,8 @@
 cff-version: 1.2.0
 title: "GSE243013 NSCLC Multi-Omics Analysis"
 type: software
-version: 1.0.0
-version: 1.0.0
-date-released: 2026-08-06
+version: 1.0.1
+date-released: 2026-08-08
 doi: 10.5281/zenodo.21816175
 url: "https://doi.org/10.5281/zenodo.21816175"
 message: "If you use this software, please cite it as below."
