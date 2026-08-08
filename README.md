@@ -13,7 +13,12 @@ in Zenodo:
 
 本代码库包含一项针对接受新辅助抗PD-1免疫治疗的非小细胞肺癌（NSCLC）患者免疫异质性单细胞RNA测序（scRNA-seq）研究的分析代码。该研究利用GSE243013数据（243名患者，1,254,749个细胞）来识别与病理学无应答相关的免疫组分表达程序。
 
-**关键发现：** 糖酵解相关程序满足预设的内部整合证据标准，在所有8种评分细胞类型中均呈负NES（FDR < 0.05），并在TCGA-LUAD中显示出外部生存关联（HR = 1.46，P = 5.68e-06）。
+**Key findings**
+The all-immune glycolysis program was enriched toward pathological nonresponse in the primary analysis (NES = −2.3589, FDR = 3.00×10^−11) and in the nested strict chemo-immunotherapy sensitivity cohort (NES = −2.4126, FDR = 7.51×10^−12).
+Across eight prespecified immune-cell strata, all eight NES values were negative, indicating concordant directionality, whereas only one of eight strata met FDR < 0.05.
+In TCGA, the glycolysis score was associated with overall survival in LUAD (HR = 1.46, 95% CI 1.24–1.73, P < 0.001) but not in LUSC (HR = 1.02, 95% CI 0.89–1.18, P = 0.76).
+Across 145 program-level cross-cohort tests, four met BH FDR < 0.05.
+Because heterogeneity for the all-immune glycolysis association was high (I2 = 90.4%), the pooled fixed-effect estimate is considered descriptive rather than confirmatory.
 
 ## 2. 仓库范围
 
@@ -74,7 +79,8 @@ GSE243013-NSCLC-multiomics/
 
 - **GSE243013:** Available from GEO (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243013). Four supplementary files are required (see [data/README.md](data/README.md)).
 - **TCGA:** Available via curatedTCGAData R package (version 1.34.0). LUAD and LUSC are analyzed separately.
-- **MSigDB:** Hallmark and Reactome gene sets from MSigDB v2024.1.Hs (local extraction).
+- **MSigDB:** MSigDB Hallmark gene sets (v2024.1.Hs) were used for the pathway–enrichment results reported in the manuscript.
+Reactome results are not reported in the manuscript.
 - **Patient manifest:** Reconstructed locally from downloaded GEO metadata; not redistributed in this repository.
 
 ## 6. Hardware and Storage Requirements
@@ -88,7 +94,7 @@ See [docs/HARDWARE_REQUIREMENTS.md](docs/HARDWARE_REQUIREMENTS.md) for details.
 
 ## 7. Software Requirements
 
-Tested with R 4.6.1. Key packages:
+Tested with R 4.6.0. Key packages:
 
 | Package | Purpose | Source |
 |---------|---------|--------|
